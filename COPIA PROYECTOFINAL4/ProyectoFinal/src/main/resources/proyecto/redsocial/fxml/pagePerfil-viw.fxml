@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="743.0" stylesheets="@../css/estiloMainPage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.redsocial.controller.PagePerfilController">
+    <children>
+        <TextArea fx:id="txtAreaTexto" layoutX="33.0" layoutY="147.0" prefHeight="328.0" prefWidth="674.0" promptText="Cambiar foto de perfil">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </TextArea>
+        <Button fx:id="btnPublicar" layoutX="329.0" layoutY="507.0" mnemonicParsing="false" onAction="#onPublicar" prefHeight="32.0" prefWidth="85.0" styleClass="group-suggestion-label" stylesheets="@../css/estiloMainPage.css" text="Cambiar" />
+        <HBox fx:id="HBoxArchivo" alignment="CENTER" layoutX="34.0" layoutY="486.0" onMousePressed="#onSubirArchivo" prefHeight="32.0" prefWidth="155.0">
+            <children>
+                <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/cargando.png" />
+                    </image>
+                </ImageView>
+                <Label text="  Subir Archivo" />
+            </children>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </HBox>
+        <Label fx:id="labelArchivo" layoutX="185.0" layoutY="518.0" prefHeight="18.0" prefWidth="135.0" />
+        <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="14.0" prefHeight="90.0" prefWidth="315.0" spacing="15.0">
+            <children>
+                <StackPane fx:id="fotoPerfil" prefHeight="90.0" prefWidth="66.0">
+                    <children>
+                        <ImageView fitHeight="82.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/usuario.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </StackPane>
+                <Label fx:id="nombreUsuario" prefHeight="54.0" prefWidth="249.0" stylesheets="@../css/estiloMainPage.css" text="Nombre Usuario">
+               <font>
+                  <Font size="29.0" />
+               </font></Label>
+            </children>
+        </HBox>
+      <VBox layoutX="111.0" layoutY="72.0" prefHeight="38.0" prefWidth="122.0">
+         <children>
+            <Label fx:id="nombreUsuario1" alignment="CENTER" prefHeight="38.0" prefWidth="127.0" stylesheets="@../css/estiloMainPage.css" text="   Cambiar nombre  ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
